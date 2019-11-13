@@ -1,4 +1,15 @@
-﻿# Marlin 3D Printer Firmware
+﻿# Marlin 2.0 for BigTreeTech SKR mini E3 v1.2
+ 
+This is a fork of the main Marlin bugfix-2.0 branch with modifications to make it work on the BigTreeTech SKR mini E3 v1.2 main board. Initially this will be limited to the Creality Ender 5 but may be extended to other Creality models compatible with the SKR mini E3.
+
+Changes made include:
+* Basic changes for the SKR mini E3 as detailed by BigTreeTech at [https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/master/firmware/V1.2/readme.md](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/master/firmware/V1.2/readme.md).
+* Support for BLTouch for Auto Bed Leveling
+* A hack to use 512 kB of program memory - Although the STM32F103RCT6 chip on the v1.2 board is listed as containing 256 kB of program memory, it has been found that the processor actually contains 512 kB. This is likely because it shares the same die as other chips in the STM32F103 range. Relatively simple changes can make this additional program memory available, allowing us to use additional Marlin features.
+
+---
+
+# Marlin 3D Printer Firmware
 
 [![Build Status](https://travis-ci.org/MarlinFirmware/Marlin.svg?branch=bugfix-2.0.x)](https://travis-ci.org/MarlinFirmware/Marlin)
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
